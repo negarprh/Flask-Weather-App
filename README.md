@@ -5,8 +5,8 @@ A simple weather forecast web application built with Flask using Python. This ap
 
 ## Features
 
-- **Current Weather**: Displays the current temperature, weather condition, humidity, and wind speed.
-- **3-Day Forecast**: Shows the forecast for the next three days, including temperature and weather condition.
+- **Current Weather**: Displays the current temperature, weather conditions, humidity, and wind speed.
+- **3-Day Forecast**: Shows the forecast for the next three days, including temperature and weather conditions.
 - **Dynamic Styling**: Changes temperature display styles based on conditions (e.g., hot, cold).
 
 ## Technologies Used
@@ -27,7 +27,7 @@ A simple weather forecast web application built with Flask using Python. This ap
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/flask_weather_app.git
+   git clone https://github.com/negarprh/flask_weather_app.git
    cd flask_weather_app
    ```
 
@@ -40,7 +40,7 @@ A simple weather forecast web application built with Flask using Python. This ap
 
 3. **Install the required dependencies:**
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirement.txt
    ```
 
 4. **Get API Key** (if using a weather API):
@@ -67,13 +67,13 @@ flask_weather_app/
 │   └── weather.html       # Weather display template
 ├── main.py                # Main Flask application file
 ├── README.md              # Project documentation
-└── requirements.txt       # Project dependencies
+└── requirement.txt       # Project dependencies
 ```
 
 ## Usage
 
 1. Launch the application and view the current weather on the home page.
-2. The app displays the current temperature, weather condition, humidity, and wind speed.
+2. The app displays the current temperature, weather conditions, humidity, and wind speed.
 3. A 3-day forecast section provides temperature and weather conditions for the next three days.
 
 ## Screenshots
@@ -81,19 +81,17 @@ flask_weather_app/
 ### Website Preview
 ![Website Preview](website_screenshot.png)
 
-Add the screenshot image named `website_screenshot.png` in the root directory of your project to match this path.
-
 ## Contributing
 
 Contributions are welcome! If you have ideas for new features or improvements, please fork the repository and submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This project is licensed under the MIT License. Please take a look at the [LICENSE](LICENSE) file for more information.
 
 ## Acknowledgments
 
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [OpenWeatherMap API](https://openweathermap.org/) for providing weather data (if applicable)
-```
+
 
