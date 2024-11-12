@@ -1,7 +1,5 @@
-Here's the entire content formatted as code for you to copy directly into your `README.md` file:
 
-```markdown
-# Weather Forecast Web App
+# Flask Weather Forecast Web App
 
 A simple weather forecast web application built with Flask using Python. This application provides the current weather conditions and a 3-day weather forecast, with information such as temperature, weather condition, humidity, and wind speed. The frontend is designed with a minimalist layout using HTML and CSS.
 
@@ -9,6 +7,7 @@ A simple weather forecast web application built with Flask using Python. This ap
 
 - **Current Weather**: Displays the current temperature, weather condition, humidity, and wind speed.
 - **3-Day Forecast**: Shows the forecast for the next three days, including temperature and weather condition.
+- **Dynamic Styling**: Changes temperature display styles based on conditions (e.g., hot, cold).
 
 ## Technologies Used
 
@@ -28,8 +27,8 @@ A simple weather forecast web application built with Flask using Python. This ap
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/negarprh/weather-forecast-app.git
-   cd weather-forecast-app
+   git clone https://github.com/yourusername/flask_weather_app.git
+   cd flask_weather_app
    ```
 
 2. **Set up a virtual environment:**
@@ -59,14 +58,16 @@ A simple weather forecast web application built with Flask using Python. This ap
 ### Project Structure
 
 ```plaintext
-weather-forecast-app/
+flask_weather_app/
+├── .venv/                 # Virtual environment files
 ├── static/
-│   └── styles.css        # CSS file for styling
+│   └── style.css          # CSS file for styling
 ├── templates/
-│   └── index.html        # HTML file for the main page
-├── app.py                # Main Flask application file
-├── requirements.txt      # Project dependencies
-└── README.md             # Project documentation
+│   ├── base.html          # Base HTML template
+│   └── weather.html       # Weather display template
+├── main.py                # Main Flask application file
+├── README.md              # Project documentation
+└── requirements.txt       # Project dependencies
 ```
 
 ## Usage
@@ -77,8 +78,10 @@ weather-forecast-app/
 
 ## Screenshots
 
-### Current Weather and 3-Day Forecast
-![Weather Forecast Screenshot](screenshot.png)
+### Website Preview
+![Website Preview](website_screenshot.png)
+
+Add the screenshot image named `website_screenshot.png` in the root directory of your project to match this path.
 
 ## Contributing
 
@@ -93,3 +96,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [OpenWeatherMap API](https://openweathermap.org/) for providing weather data (if applicable)
 ```
+
