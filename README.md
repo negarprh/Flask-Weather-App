@@ -1,5 +1,4 @@
-
-# Flask Weather Forecast Web App
+# Flask Weather Forecast Web App 🌡️☁️
 
 A simple weather forecast web application built with Flask using Python. This application provides the current weather conditions and a 3-day weather forecast, with information such as temperature, weather condition, humidity, and wind speed. The frontend is designed with a minimalist layout using HTML and CSS.
 
