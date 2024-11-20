@@ -5,10 +5,11 @@
 
 {% block content %}
     <div class="weather-card">
-        <h2>Current Weather</h2>
+
         <div class="weather-info">
+               <h2>Current Weather</h2>
             <p class="temperature">{{ weather.temperature }}°C</p>
-            <p class="condition">{{ weather.condition }}</p>
+            <p class="condition">{{ weather.condition | safe }}</p>
             <div class="details">
                 <p>Humidity: {{ weather.humidity }}%</p>
                 <p>Wind Speed: {{ weather.wind_speed }} km/h</p>
@@ -18,14 +19,13 @@
 
 
 
-
-{% if weather.temperature > 30 %}
-    <p class="temperature hot">{{ weather.temperature }}°C</p>
-{% elif weather.temperature < 10 %}
-    <p class="temperature cold">{{ weather.temperature }}°C</p>
-{% else %}
-    <p class="temperature">{{ weather.temperature }}°C</p>
-{% endif %}
+<!--{% if weather.temperature > 30 %}-->
+<!--    <p class="temperature hot">{{ weather.temperature }}°C</p>-->
+<!--{% elif weather.temperature < 10 %}-->
+<!--    <p class="temperature cold">{{ weather.temperature }}°C</p>-->
+<!--{% else %}-->
+<!--    <p class="temperature">{{ weather.temperature }}°C</p>-->
+<!--{% endif %}-->
 
 <h2>Forcast for Next 3 Days</h2>
 

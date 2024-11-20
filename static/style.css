@@ -1,23 +1,136 @@
-.temperature.hot {
-    color: #e53e3e;
-}
-
-.temperature.cold {
-    color: #3182ce;
-}
-.forecast {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-}
-
-.forecast-day {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* General Body Styling */
+body {
+    background: linear-gradient(90deg, #2193b0, #6dd5ed);
+    background-size: 200% 200%;
+    animation: gradient 6s ease infinite;
     color: #333;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Center all text */
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Smooth Gradient Animation */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header Styling */
+h1 {
+    font-size: 48px;
+    color: rgba(0, 0, 0, 0.69);
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 10px #ffffff, 0 0 20px #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Weather Card Styling */
+.weather-card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 90%;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center; /* Center text in the card */
+}
+
+/* Current Temperature Styling */
+.temperature {
+    font-size: 56px;
+    font-weight: bold;
+    margin: 10px 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.69));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Condition Text Styling */
+.condition {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #34495e;
+}
+
+/* Details in the Weather Card */
+.weather-card .details {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Forecast Section */
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin: 20px auto;
+    justify-content: center;
+    max-width: 800px; /* Centers forecast section */
+}
+
+/* Individual Forecast Cards */
+.forecast-day {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.forecast-day:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Day Names in Forecast */
+.forecast-day h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+/* Temperature and Condition in Forecast */
+.forecast-day p {
+    font-size: 16px;
+    margin: 4px 0;
+}
+
+/* Footer Styling */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .temperature {
+        font-size: 48px;
+    }
+
+    .weather-card {
+        padding: 15px;
+    }
+
+    .forecast-day {
+        width: 100%; /* Stretches forecast cards on smaller screens */
+    }
 }
