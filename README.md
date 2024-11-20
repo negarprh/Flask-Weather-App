@@ -101,7 +101,7 @@ flask_weather_app/
 ## Screenshots 📸
 
 ### Application Preview
-![Website Preview](screenshot.png)
+
 
 ---
 
