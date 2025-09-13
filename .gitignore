@@ -1,3 +1,7 @@
+# real secrets
 .env
 *.env
 .env.*
+
+# keep the template
+!.env.example
