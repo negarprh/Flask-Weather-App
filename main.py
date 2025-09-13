@@ -1,12 +1,21 @@
 from flask import Flask, render_template
 import requests
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
 # OpenWeatherMap API key and URL
-API_KEY = "007fd3ea77b65d71397dc06f76860542"
-BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
-FORECAST_URL = "http://api.openweathermap.org/data/2.5/forecast"
+
+
+load_dotenv()
+API_KEY = os.getenv("OPENWEATHER_API_KEY")
+if not API_KEY:
+    raise RuntimeError("Missing OPENWEATHER_API_KEY")
+
+BASE_URL = "https://api.openweathermap.org/data/2.5/weather"
+FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast"
+
 
 
 # Define a dictionary for weather condition emojis
