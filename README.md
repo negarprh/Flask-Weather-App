@@ -34,38 +34,85 @@ A dynamic weather forecast web application built with Flask using Python and int
 
 ### Installation
 
-1. **Clone the repository**:
+1. **Clone the repository**
+
    ```bash
-   git clone https://github.com/negarprh/flask_weather_app.git
-   cd flask_weather_app
+   git clone https://github.com/negarprh/Flask-Weather-App.git
+   cd Flask-Weather-App
    ```
 
-2. **Set up a virtual environment**:
+2. **Create & activate a virtual environment**
+
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # For macOS/Linux
-   venv\Scripts\activate     # For Windows
+   # macOS/Linux
+   python3 -m venv .venv
+   source .venv/bin/activate
+
+   # Windows (PowerShell)
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
    ```
 
-3. **Install dependencies**:
+3. **Install dependencies**
+
    ```bash
-   pip install -r requirement.txt
+   pip install -r requirements.txt
    ```
 
-4. **Obtain an API Key**:
-   - Sign up at [OpenWeatherMap](https://openweathermap.org/) and generate an API key.
-   - Replace the placeholder API key in the `main.py` file with your actual key:
-     ```python
-     API_KEY = "your_api_key_here"
+4. **Configure environment variables (do NOT commit .env)**
+
+   ```bash
+   # create your local env file
+   cp .env.example .env        # macOS/Linux
+   # Windows (PowerShell):
+   Copy-Item .env.example .env
+   ```
+
+   Edit `.env` and put your OpenWeather key:
+
+   ```
+   OPENWEATHER_API_KEY=YOUR_KEY_HERE
+   ```
+
+5. **Run the application**
+
+   ```bash
+   flask --app main run
+   ```
+
+   Then open `http://127.0.0.1:5000`.
+
+---
+
+## API Integration 🌐
+
+This app uses **OpenWeatherMap** to fetch live data.
+
+1. **Current Weather endpoint**
+
+   * URL: `https://api.openweathermap.org/data/2.5/weather`
+   * Example:
+
+     ```bash
+     curl "https://api.openweathermap.org/data/2.5/weather?q=Montreal&appid=YOUR_KEY&units=metric"
      ```
 
-5. **Run the application**:
-   ```bash
-   flask run
-   ```
+2. **5-Day / 3-Hour Forecast endpoint**
 
-6. **Access the app**:
-   - Open your browser and go to `http://127.0.0.1:5000`.
+   * URL: `https://api.openweathermap.org/data/2.5/forecast`
+   * Example:
+
+     ```bash
+     curl "https://api.openweathermap.org/data/2.5/forecast?q=Montreal&appid=YOUR_KEY&units=metric"
+     ```
+
+3. **API Key handling**
+
+   * Generate a key at [https://openweathermap.org/](https://openweathermap.org/)
+   * Store it in `.env` as `OPENWEATHER_API_KEY`.
+   * The app reads it via `python-dotenv`; **do not hard-code keys in code**.
+
+
 
 ---
 
@@ -105,29 +152,6 @@ flask_weather_app/
 
 ---
 
-## API Integration 🌐
-
-This application integrates with the **OpenWeatherMap API** for fetching real-time weather data.
-
-### How the API is Used:
-1. **Endpoint for Current Weather**:
-   - URL: `http://api.openweathermap.org/data/2.5/weather`
-   - Example Request:
-     ```bash
-     http://api.openweathermap.org/data/2.5/weather?q=Montreal&appid=your_api_key&units=metric
-     ```
-2. **Endpoint for 3-Day Forecast**:
-   - URL: `http://api.openweathermap.org/data/2.5/forecast`
-   - Example Request:
-     ```bash
-     http://api.openweathermap.org/data/2.5/forecast?q=Montreal&appid=your_api_key&units=metric
-     ```
-
-3. **API Key**:
-   - Sign up at [OpenWeatherMap](https://openweathermap.org/) to get your API key.
-   - Replace the placeholder key in `main.py` with your key.
-
----
 
 ## Contributing 🤝
 
